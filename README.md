@@ -109,21 +109,10 @@ model = smp.Unet(encoder_name='efficientnet-b1',<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;classes=3,<br/> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;activation=None)
                 
-### 4.3. Configurations
-**Loss Function**</br>
-> TverskyLoss = smp.losses.TverskyLoss(mode='multilabel', log_loss=False)</br>
-> BCELoss = smp.losses.SoftBCEWithLogitsLoss()</br>
-> loss_fn = 0.7 * TverskyLoss(y_pred, y_true) + 0.3 * BCELoss(y_pred, y_true)</br>
 
-**Metric**</br>
-> metric = torchmetrics.Dice(average='macro', num_classes=3).to(device)</br>
-
-**Optimizer**</br>
-> optimizer = optim.SGD(model.parameters(), lr=0.8, momentum=0.9, weight_decay=1e-4)
-
-### 4.4. Train
+### 4.3. Train
 Here, you'll find instructions and code related to the training of the segmentation model. This section covers the process of training the model on the provided dataset.
 
-### 4.5. Evaluate
+### 4.4. Evaluate
 In the evaluation section, the methods and metrics used to assess the model's performance are detailed. It explains how the model's segmentation results are quantified and provides insights into the model's effectiveness.
 
